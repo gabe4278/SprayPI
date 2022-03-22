@@ -64,7 +64,4 @@ Do you not want to consider using this API? Here is the pros of it!
 
 ## Todo
 
-[] Add Rainbow Paint to the API.
-[] Add saving paint API for VIP servers.
-[] Add API for GetRank.
-[] Add ClearAllPaint (for VIP servers, I will look into ClearAllPaint if it is able to be used in public servers).
+[] Add more QoL features to the API.
