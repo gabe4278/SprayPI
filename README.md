@@ -64,4 +64,4 @@ Do you not want to consider using this API? Here is the pros of it!
 
 ## Todo
 
-[ ] Add more QoL features to the API.
+- [ ] Add more QoL features to the API.
