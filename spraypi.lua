@@ -52,7 +52,10 @@ end
     library:SendPaintInfo(ToDraw)
 ]]
 function SprayPI.SendPaintInfo(info)
+	if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("SprayPaint") then
 	game:GetService("Players").LocalPlayer.Backpack:WaitForChild("SprayPaint"):FindFirstChild("SendPaintInfo"):InvokeServer(protBypass, info)
+		else
+		game:GetService("Players").LocalPlayer.Character:WaitForChild("SprayPaint"):FindFirstChild("SendPaintInfo"):InvokeServer(protBypass, info)
 end
 
 return SprayPI
