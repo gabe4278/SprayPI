@@ -9,7 +9,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local SprayPI = {}
 -- Spray Paint protects its remotes using a random value between 300K and 400K.
 -- Using this value, we can bypass those protections and send info to the server.
-local protBypass = math.random(300000, 400000)
+local protBypass = tick() / 300
 
 -- Vote() will vote on a current running votekick.
 function SprayPI.Vote(val:boolean)
@@ -52,7 +52,7 @@ end
     library:SendPaintInfo(ToDraw)
 ]]
 function SprayPI.SendPaintInfo(info)
-	game:GetService("Players").LocalPlayer.Character:WaitForChild("SprayPaint"):FindFirstChild("SendPaintInfo"):InvokeServer(protBypass, info)
+	game:GetService("Players").LocalPlayer.Backpack:WaitForChild("SprayPaint"):FindFirstChild("SendPaintInfo"):InvokeServer(protBypass, info)
 end
 
 return SprayPI
