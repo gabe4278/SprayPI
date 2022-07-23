@@ -24,12 +24,12 @@ end
 
 -- Spray() will start spraying whereever SendPaintInfo() requests.
 function SprayPI.Spray(color:Color3)
-	Players.LocalPlayer.Character:WaitForChild("SprayPaint"):FindFirstChild("SprayEffect"):FireServer(true, color)
+	ReplicatedStroage:FindFirstChild("SprayEffect"):FireServer(true, color)
 end
 
 -- StopSpraying() will stop Spray() from running. (Spray runs until StopSpraying() is called)
 function SprayPI.StopSpraying()
-	Players.LocalPlayer.Character:WaitForChild("SprayPaint"):FindFirstChild("SprayEffect"):FireServer(false)
+	ReplicatedStroage:FindFirstChild("SprayEffect"):FireServer(false)
 end
 
 --[[
