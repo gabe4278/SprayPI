@@ -24,12 +24,12 @@ end
 
 -- Spray() will start spraying whereever SendPaintInfo() requests.
 function SprayPI.Spray(color:Color3)
-	ReplicatedStroage:FindFirstChild("SprayEffect"):FireServer(true, color)
+	ReplicatedStorage:FindFirstChild("SprayEffect"):FireServer(true, color)
 end
 
 -- StopSpraying() will stop Spray() from running. (Spray runs until StopSpraying() is called)
 function SprayPI.StopSpraying()
-	ReplicatedStroage:FindFirstChild("SprayEffect"):FireServer(false)
+	ReplicatedStorage:FindFirstChild("SprayEffect"):FireServer(false)
 end
 
 --[[
