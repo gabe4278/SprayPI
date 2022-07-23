@@ -17,7 +17,7 @@ Integrating SprayPI into your own project is easy as PI! With 1 line of code, yo
 
 To start, add this script at the top of your code:
 ```
-local SprayPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/SimultaneousPing/SprayPI/main/spraypi.lua"))()
+local SprayPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/gabe4278/SprayPI/main/spraypi.lua"))()
 ```
 
 And you are now done! Now you can use the API. Here is the API:
