@@ -16,12 +16,12 @@ An open sourced API for the Roblox game Spray Paint which allows you to design c
 Integrating SprayPI into your own project is easy as PI! With 1 line of code, you can import the API and use it fluently, without any other hassle such as bloatware.
 
 To start, add this script at the top of your code:
-```
+```lua
 local SprayPI = loadstring(game:HttpGet("https://raw.githubusercontent.com/gabe4278/SprayPI/main/spraypi.lua"))()
 ```
 
 And you are now done! Now you can use the API. Here is the API:
-```
+```lua
 function Vote(bool) -- Votes on a currently running votekick.
 function InitiateVotekick(Player, Reason) -- Creates a votekick for [player] with [reason].
 function Spray(Color3) -- This activates the SprayEffect remote. It will not stop unless StopSpraying() is called.
@@ -32,19 +32,21 @@ function SendPaintInfo(info) -- This is the most advanced function in the API. I
 ## Sending Paint Info
 SendPaintInfo is a powerful function in the API which parses data to the server relating to spraying. This function is normally protected, but however SprayPI bypasses that protection automatically. To send paint info, organize your data inside of a table like this
 
-```
+```lua
 local Data = {
 	[1] = {
+		["brushType"] = "circle",
 		["scale"] = 0.4,
 		["cframe"] = CFrame.new(value),
 		["color"] = Color3.new(1, 1, 1),
-		["layer"] = 1
+		["layer"] = 1,
+		["trans"] = 0
 	}
 }
 ```
 
 Then execute your data by calling SendPaintInfo like this.
-```
+```lua
 SprayPI.SendPaintInfo(Data)
 ```
 That is how you send data. Easy as that!
