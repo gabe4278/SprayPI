@@ -35,7 +35,7 @@ SendPaintInfo is a powerful function in the API which parses data to the server 
 ```lua
 local Data = {
 	[1] = {
-		["brushType"] = "circle",
+		["brushType"] = "Circle",
 		["scale"] = 0.4,
 		["cframe"] = CFrame.new(value),
 		["color"] = Color3.new(1, 1, 1),
